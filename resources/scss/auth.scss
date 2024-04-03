@@ -1,0 +1,27 @@
+.swal2-height-auto{
+    height: unset !important;
+}
+
+main{
+    max-width: 600px;
+    height: 500px !important;
+
+    @media screen and (max-width:600px) {
+        width: 100%;          
+        max-width: 100%;  
+        height: 100% !important;   
+
+        > div{
+            width: 100% !important;
+        }
+    }
+
+    form{
+        width: 75%;
+
+        @media screen and (max-width:600px) {
+            width: calc(100% - 20px);
+        }
+    }
+
+}

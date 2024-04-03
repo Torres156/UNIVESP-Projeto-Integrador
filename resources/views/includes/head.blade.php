@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{{ $title }}</title>
+<title>Biblioteca Legal - {{ isset($title) ? $title : "" }}</title>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.bunny.net">
@@ -13,3 +13,7 @@
 </style>
 
 <link href="assets/css/bootstrap.min.css" rel='stylesheet'>
+
+@if(isset($css))
+<link href="assets/css/{{$css}}.css" rel='stylesheet'>
+@endif

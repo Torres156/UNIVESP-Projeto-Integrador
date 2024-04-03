@@ -1,0 +1,61 @@
+@import "./admin_variaveis";
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+main{
+    max-width: 800px;
+    height: 500px !important;
+    
+    @media screen and (max-width:600px) {
+        width: 100%;          
+        max-width: 100%;  
+        height: 100% !important;   
+
+        > div{
+            width: 100% !important;
+        }
+    }
+
+    form{
+        width: 75%;
+
+        @media screen and (max-width:600px) {
+            width: calc(100% - 20px);
+        }
+    }
+
+    nav{
+        width: 100%;
+        max-width: 180px !important;
+        border-right-width: thin;
+        height: 100%;
+        
+        > ul{
+            margin-left: 20px;  
+            
+            a{
+                color: $nav-main-color !important;
+                &:hover{
+                    color: $nav-main-color-hover !important;
+                }
+            }
+        }
+    }
+
+    header{
+        padding: 10px 20px;
+        height: 100px;
+
+        > h2{
+            color:$nav-main-color !important;
+            margin-left: 40px;            
+        }
+    }
+
+}
