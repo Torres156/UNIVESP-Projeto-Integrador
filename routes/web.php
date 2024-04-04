@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AlunoController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -26,4 +27,7 @@ Route::name('admin.')->middleware(AuthMiddleware::class)->group(function() {
     Route::get("/", [AdminController::class, 'index'])->name('dashboard');
 
     Route::get("/sair", [AdminController::class, 'sair'])->name('logout');
+    
+    Route::get("/aluno", [AlunoController::class, 'index'])->name('aluno');
+    Route::post("/aluno", [AlunoController::class, 'gravar'])->name('aluno');
 });

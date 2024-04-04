@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @php
-    $title = 'Dashboard';
     $css = 'admin';
-    $dashboard_title = "Inicio";
 @endphp
 @include('includes.head')
 @include('includes.scripts')
@@ -13,11 +11,11 @@
         <nav class="navbar border-warning">
             <ul class ="nav navbar-nav">
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="#">Inicio</a>                    
+                    <a class ="nav-link fw-bold" href="{{route('admin.dashboard')}}">Início</a>                    
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="#">Cadastro Aluno</a>
+                    <a class ="nav-link fw-bold" href="{{route('admin.aluno')}}">Cadastro Aluno</a>
                 </li>
 
                 <li class ="nav-item">
@@ -43,7 +41,7 @@
                 </li>
             </ul>
         </nav>
-        <div class="d-flex w-100">
+        <div class="d-flex w-100 flex-column">
             @include('admin.dashboard.includes.header')
             @yield('content')
         </div>
@@ -57,9 +55,25 @@
             title: 'Ops! Aconteceu algo errado.',
             html: errors,
             icon: 'error',
-            confirmButtonText: 'OK'
+            confirmButtonText: 'OK',
+            heightAuto: false,
         })
     </script>
+@endif
+
+@if (Session::has("success"))
+    <script>        
+    const message = `{!! Session::get("success") !!}`;
+        Swal.fire({
+            title: '',
+            html: message,
+            icon: 'success',
+            confirmButtonText: 'OK',
+            heightAuto: false,
+        })
+    </script>
+    @php
+@endphp
 @endif
 
 </html>

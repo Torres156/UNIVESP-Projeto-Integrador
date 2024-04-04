@@ -1,0 +1,21 @@
+form.aluno {
+    .ra {
+         width: 25% !important;    
+         flex: .5 0 0;   
+    }
+    @media screen and (max-width: 700px) {
+        div > .col {
+            width: 100% !important;
+            flex:none !important;                        
+        }
+    }
+    input[readonly]
+    {
+        background-color: rgb(247, 245, 245);
+
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}

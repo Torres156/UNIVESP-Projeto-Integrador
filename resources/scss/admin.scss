@@ -3,14 +3,12 @@
 body
 {
     width: 100vw;
-    height: 100vh;
+    height: 100vh !important;
 }
-
-
 
 main{
     max-width: 800px;
-    height: 500px !important;
+    height: 540px !important;
     
     @media screen and (max-width:600px) {
         width: 100%;          
@@ -56,6 +54,6 @@ main{
             color:$nav-main-color !important;
             margin-left: 40px;            
         }
-    }
-
+    }    
 }
+@import 'admin_aluno';

@@ -45,7 +45,8 @@
         title: 'Ops! Aconteceu algo errado.',        
         html: errors,
         icon: 'error',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'OK',
+        heightAuto: false,
     })
 </script>
 @endif

@@ -10,7 +10,10 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard.index');
+        return view('admin.dashboard.index', [
+            'title' => 'Administração',
+            'dashboard_title' => 'Início',
+           ]);
     }
 
     public function sair()
