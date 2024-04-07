@@ -12,7 +12,10 @@ class AuthController extends Controller
 {
     public function Index()
     {
-       return view("admin.auth.index") ;
+        if (Auth::user())
+            return redirect()->route("admin.dashboard");
+
+        return view("admin.auth.index");
     }
 
     public function entrar(Request $request)
@@ -35,16 +38,16 @@ class AuthController extends Controller
         // Verificar se existe
         $user = User::where([
             ['email', '=', $email]
-            ])->first();
+        ])->first();
 
-        if (!isset($user))        
-            return back()->withErrors("Conta não encontrada!");      
+        if (!isset($user))
+            return back()->withErrors("Conta não encontrada!");
 
-        $result = Hash::check($senha, $user->password);        
+        $result = Hash::check($senha, $user->password);
         if (!$result)
             return back()->withErrors("Conta ou senha inválida!");
-        
-        Auth::login($user,true);
+
+        Auth::login($user, true);
         return redirect()->route("admin.dashboard");
     }
 }

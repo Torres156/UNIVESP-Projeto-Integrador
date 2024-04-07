@@ -19,8 +19,8 @@
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold pb-0" href="#">Cadastro Livro</a>
-                    <a class ="nav-link pt-0" href="#">Lista de Livros</a>
+                    <a class ="nav-link fw-bold pb-0" href="{{route('admin.livro.cadastro')}}">Cadastro Livro</a>
+                    <a class ="nav-link pt-0" href="{{route('admin.livro')}}">Lista de Livros</a>
                 </li>
 
                 <li class ="nav-item">

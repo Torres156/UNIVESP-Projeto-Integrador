@@ -13,7 +13,7 @@
 
         <!-- Logo -->
         <div class="d-flex justify-content-around p-5 hstack gap-5">
-            <img class="float-right" src="assets/img/bibliotecalegal2.png" width="180">
+            <img class="float-right" src="{{asset('assets/img/bibliotecalegal2.png')}}" width="180">
         </div>
 
         <!-- Formulario -->

@@ -1,0 +1,47 @@
+form.livro {
+    .ra {
+         width: 25% !important;    
+         flex: .5 0 0;   
+    }
+    @media screen and (max-width: 700px) {
+        div > .col {
+            width: 100% !important;
+            flex:none !important;                        
+        }
+    }
+    input[readonly]
+    {
+        background-color: rgb(247, 245, 245);
+
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .imagem{
+        width: 50px;
+        height: 50px;
+        border: thin solid gray;
+        background-color: rgb(236, 234, 234);
+        background-size: 100% 100% !important;
+    }
+}
+
+section.livro{
+    height: 100%;
+    
+    tr{        
+        align-items:center;
+    }
+
+    td >div{
+        height: 30px;
+    }
+
+    .action{
+        font-size: 22px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
