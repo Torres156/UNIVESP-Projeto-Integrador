@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DevolucaoController;
 use App\Http\Controllers\Admin\EmprestimoController;
 use App\Http\Controllers\Admin\LivroController;
+use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -50,4 +51,11 @@ Route::name('admin.')->middleware(AuthMiddleware::class)->group(function() {
     Route::get("/devolucao", [DevolucaoController::class, "index"])->name("devolucao");
     Route::get("/devolucao/livros/{id}", [DevolucaoController::class, "pegarLivros"])->name("devolucao.livros");
     Route::post("/devolucao", [DevolucaoController::class, "salvar"]);
+
+    // Usuarios
+    Route::get("/usuarios/cadastro", [UsuarioController::class, "cadastro"])->name("usuario.cadastro");
+    Route::post("/usuarios/cadastro", [UsuarioController::class, "novo"]);
+    Route::get("/usuarios", [UsuarioController::class, "index"])->name("usuario");
+    Route::get("/usuarios/edit/{id}", [UsuarioController::class, "editar"])->name('usuario.editar');
+    Route::post("/usuarios/edit/{id}", [UsuarioController::class, "salvar"])->name('usuario.editar.salvar');
 });

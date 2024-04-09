@@ -11,33 +11,35 @@
         <nav class="navbar border-warning">
             <ul class ="nav navbar-nav">
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="{{route('admin.dashboard')}}">Início</a>                    
+                    <a class ="nav-link fw-bold" href="{{ route('admin.dashboard') }}">Início</a>
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="{{route('admin.aluno')}}">Cadastro Aluno</a>
+                    <a class ="nav-link fw-bold" href="{{ route('admin.aluno') }}">Cadastro Aluno</a>
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold pb-0" href="{{route('admin.livro.cadastro')}}">Cadastro Livro</a>
-                    <a class ="nav-link pt-0" href="{{route('admin.livro')}}">Lista de Livros</a>
+                    <a class ="nav-link fw-bold pb-0" href="{{ route('admin.livro.cadastro') }}">Cadastro Livro</a>
+                    <a class ="nav-link pt-0" href="{{ route('admin.livro') }}">Lista de Livros</a>
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="{{route('admin.emprestimo')}}">Empréstimo</a>
+                    <a class ="nav-link fw-bold" href="{{ route('admin.emprestimo') }}">Empréstimo</a>
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="{{route('admin.devolucao')}}">Devolução</a>
+                    <a class ="nav-link fw-bold" href="{{ route('admin.devolucao') }}">Devolução</a>
                 </li>
 
-                <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="#">Administrador</a>
-                    <a class ="nav-link pt-0" href="#">Lista de Usuarios</a>
-                </li>
+                @if (auth()->user()->acesso === 1)
+                    <li class ="nav-item">
+                        <a class ="nav-link fw-bold" href="{{ route('admin.usuario.cadastro') }}">Cadastro Usuario</a>
+                        <a class ="nav-link pt-0" href="{{ route('admin.usuario') }}">Lista de Usuarios</a>
+                    </li>
+                @endif
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="{{route('admin.logout')}}">Sair</a>
+                    <a class ="nav-link fw-bold" href="{{ route('admin.logout') }}">Sair</a>
                 </li>
             </ul>
         </nav>
@@ -61,9 +63,9 @@
     </script>
 @endif
 
-@if (Session::has("success"))
-    <script>        
-    const message = `{!! Session::get("success") !!}`;
+@if (Session::has('success'))
+    <script>
+        const message = `{!! Session::get('success') !!}`;
         Swal.fire({
             title: '',
             html: message,
@@ -73,7 +75,7 @@
         })
     </script>
     @php
-@endphp
+    @endphp
 @endif
 
 </html>
