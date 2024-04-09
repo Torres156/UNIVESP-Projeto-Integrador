@@ -1,0 +1,84 @@
+.inicio {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+
+    .alert {
+        position: absolute;
+        top: -90px;
+        z-index: 99999;
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .btn_close {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    section.emprestimos {
+        height: 250px;
+        overflow-y: scroll;
+        width: 638px;
+
+        @media screen and (max-width:700px) {
+            width: 560px;
+        }
+
+        .table-responsive {
+            max-height: 250px !important;
+        }
+
+        tbody {
+
+            th,
+            td {
+                align-items: center;
+                font-size: 14px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .text-danger {
+
+                th,
+                td {
+                    color: red !important;
+                    ;
+                }
+            }
+        }
+    }
+
+    .relatorios {
+        width: 100%;
+          box-sizing: border-box;
+
+        >div {
+            text-align: center;
+            h3{
+                font-size: 24px;
+            }
+            h2{
+                font-size: 64px;
+            }
+
+            height: 140px;
+        }
+    }
+}
+
+.custom-popover {
+    --bs-popover-border-color: red;
+    --bs-popover-header-bg: red;
+    --bs-popover-header-color: red;
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+
+    .popover-body {
+        color: red !important;
+    }
+}

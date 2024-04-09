@@ -1,4 +1,7 @@
-
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
 function formatDateBR(date) {
     var d = new Date(date),
         month = '' + (d.getMonth() + 1),
@@ -57,7 +60,7 @@ if (inputs_phone)
         });
     });
 
-const inputDate = document.querySelector('input[type=date]');
+const inputDate = document.querySelector('input[type=date][date-max-today]');
 if (inputDate)
     inputDate.setAttribute('max', formatDate(Date.now()));
 

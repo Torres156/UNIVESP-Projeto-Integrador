@@ -33,9 +33,9 @@
         <button class="btn btn-primary mt-2 col-3 ml-3" type="submit">Filtrar</button>
     </form>
 
-    <section class="livro p-4 mt-2 d-flex w-100 overflow-auto">
-        <table class="table table-hover">
-            <thead>
+    <section class="livro p-4 mt-2 d-flex w-100 pt-0 ">
+        <table class="table table-hover table-responsive">
+            <thead class="sticky-top">
                 <tr>
                     <th scope="col" class="col-2">#</th>
                     <th scope="col">Livro</th>

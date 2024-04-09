@@ -10,6 +10,10 @@ main{
     max-width: 800px;
     height: 540px !important;
     
+    nav{
+        width: 180px !important;
+    }
+    
     @media screen and (max-width:700px) {
         width: 100%;          
         max-width: 100%;  
@@ -58,3 +62,4 @@ main{
 }
 @import 'admin_aluno';
 @import 'admin_livro';
+@import 'admin_inicio';

@@ -24,11 +24,11 @@
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="#">Empréstimo</a>
+                    <a class ="nav-link fw-bold" href="{{route('admin.emprestimo')}}">Empréstimo</a>
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="#">Devolução</a>
+                    <a class ="nav-link fw-bold" href="{{route('admin.devolucao')}}">Devolução</a>
                 </li>
 
                 <li class ="nav-item">

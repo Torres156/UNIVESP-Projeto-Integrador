@@ -28,7 +28,7 @@
             <div class='col'>
                 <label class="form-label" for="nascimento">Data de nascimento*</label>
                 <input class="form-control border-warning" type="date" min="1950-12-31" name="nascimento" placeholder=""
-                    onblur="changeBirthday(event)" required>
+                    onblur="changeBirthday(event)" date-max-today required>
             </div>
 
             <div class='col'>

@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AlunoController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DevolucaoController;
+use App\Http\Controllers\Admin\EmprestimoController;
 use App\Http\Controllers\Admin\LivroController;
 use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -40,4 +42,12 @@ Route::name('admin.')->middleware(AuthMiddleware::class)->group(function() {
     Route::post("/livro/edit/{id}", [LivroController::class, "salvar"])->name('livro.editar.salvar');
     Route::get("/livro", [LivroController::class, "index"])->name("livro");
 
+    // Emprestimo
+    Route::get("/emprestimo", [EmprestimoController::class, "index"])->name("emprestimo");
+    Route::post("/emprestimo", [EmprestimoController::class, "salvar"])->name("emprestimo.salvar");
+
+    // Devolução
+    Route::get("/devolucao", [DevolucaoController::class, "index"])->name("devolucao");
+    Route::get("/devolucao/livros/{id}", [DevolucaoController::class, "pegarLivros"])->name("devolucao.livros");
+    Route::post("/devolucao", [DevolucaoController::class, "salvar"]);
 });

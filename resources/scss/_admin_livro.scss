@@ -30,6 +30,7 @@ form.livro {
 
 section.livro{
     height: 100%;
+    overflow-y: scroll;
     
     tr{        
         align-items:center;
@@ -43,5 +44,9 @@ section.livro{
         font-size: 22px;
         text-decoration: none;
         cursor: pointer;
+    }
+
+    .table-responsive {
+        max-height: 100% !important;
     }
 }
