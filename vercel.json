@@ -5,7 +5,7 @@
         "api/index.php": { "runtime": "vercel-php@0.7.0" }        
     },
     "routes": [{
-        "src": "/assets/(css|js)/(.*)",
+        "src": "/assets/(css|js|img)/(.*)",
         "dest": "/public/assets/$1/$2"
         },
         {
@@ -15,7 +15,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://integrador-5do0iytaa-gustavos-projects-5932eb31.vercel.app/",
+        "APP_URL": "https://projeto-integrador-univesp2.vercel.app/",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",

@@ -18,7 +18,7 @@
         @endif
 
 
-        <section class="emprestimos mt-2 d-flex border">
+        <section class="emprestimos mt-2 border">
             <table class="table table-hover table-responsive ">
                 <thead class="sticky-top">
                     <tr>

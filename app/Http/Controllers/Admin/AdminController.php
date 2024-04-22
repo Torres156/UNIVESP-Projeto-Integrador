@@ -14,7 +14,7 @@ class AdminController extends Controller
     public function index()
     {
         $atrasados = (DB::select("SELECT count(*) quantia FROM emprestimos WHERE devolucao < CURDATE() AND status='EMPRESTADO' ")[0]->quantia ?? 0);
-        $emprestados = (DB::select("SELECT count(*) quantia FROM emprestimos WHERE devolucao >= CURDATE() AND status='EMPRESTADO'")[0]->quantia ?? 0);
+        $emprestados = (DB::select("SELECT count(*) quantia FROM emprestimos WHERE status='EMPRESTADO'")[0]->quantia ?? 0);
         $livros = Livro::count();
         $emprestimos = DB::select("SELECT e.livro_nome livro, e.aluno_nome aluno, a.sala, e.created_at emprestimo, e.devolucao, (e.devolucao < CURDATE()) atrasado
                         FROM emprestimos e LEFT JOIN alunos a ON a.id = e.aluno_id WHERE e.status = 'EMPRESTADO' ORDER BY devolucao");
