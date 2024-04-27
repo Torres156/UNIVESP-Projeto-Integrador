@@ -15,7 +15,9 @@
                 </li>
 
                 <li class ="nav-item">
-                    <a class ="nav-link fw-bold" href="{{ route('admin.aluno') }}">Cadastro Aluno</a>
+                    <a class ="nav-link fw-bold" href="{{ route('admin.aluno.cadastro') }}">Cadastro Aluno</a>
+                    <a class ="nav-link pt-0" href="{{ route('admin.aluno.index') }}">Lista de Alunos</a>
+                    <a class ="nav-link pt-0" href="{{ route('admin.aluno.ranking') }}">Ranking</a>
                 </li>
 
                 <li class ="nav-item">

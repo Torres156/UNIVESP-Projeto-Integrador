@@ -19,7 +19,7 @@
 
 
         <section class="emprestimos mt-2 border">
-            <table class="table table-hover table-responsive ">
+            <table class="table table-hover">
                 <thead class="sticky-top">
                     <tr>
                         <th scope="col" class="col">Livro</th>

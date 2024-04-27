@@ -13,9 +13,12 @@
         "dest": "/api/index.php"
         }],
     "env": {
+        "APP_KEY" : "base64:OLoU1ObpVIle6bG0BMBWJcV58AH/FMM6c9ez+Ot6S8I=",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://projeto-integrador-univesp2.vercel.app/",
+
+        "DB_HOST": "bleachraiz.servegame.com",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",

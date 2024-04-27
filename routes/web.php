@@ -33,8 +33,12 @@ Route::name('admin.')->middleware(AuthMiddleware::class)->group(function() {
     Route::get("/sair", [AdminController::class, 'sair'])->name('logout');
     
     // Alunos
-    Route::get("/aluno", [AlunoController::class, 'index'])->name('aluno');
-    Route::post("/aluno", [AlunoController::class, 'gravar'])->name('aluno');
+    Route::get("/aluno/index", [AlunoController::class, 'index'])->name('aluno.index');
+    Route::get("/aluno/ranking", [AlunoController::class, 'ranking'])->name('aluno.ranking');
+    Route::get("/aluno/cadastro", [AlunoController::class, 'cadastro'])->name('aluno.cadastro');
+    Route::post("/aluno/cadastro", [AlunoController::class, 'gravar'])->name('aluno.cadastro');
+    Route::get("/aluno/editar/{id}", [AlunoController::class, 'editar'])->name('aluno.editar');
+    Route::post("/aluno/editar/{id}", [AlunoController::class, 'atualizar'])->name('aluno.atualizar');
 
     // Livros
     Route::get("/livro/cadastro", [LivroController::class, "cadastro"])->name('livro.cadastro');    

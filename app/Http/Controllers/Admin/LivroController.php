@@ -180,8 +180,8 @@ class LivroController extends Controller
         $livro = Livro::find($id);
 
         return view('admin.dashboard.livro.edit', [
-            'title' => 'Cadastro de Livro',
-            'dashboard_title' => 'Cadastro de Livro',
+            'title' => 'Editar Livro',
+            'dashboard_title' => 'Editar Livro',
             'livro' => $livro,
             'categories' => $categories,
         ]);
